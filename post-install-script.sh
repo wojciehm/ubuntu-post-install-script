@@ -17,20 +17,17 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # change ~/.zshrc file following
 
-# 1. Create the motd-backup folder in the user's home directory
+# 1. MOTD Setup
 mkdir -p ~/motd-backup
-
-# 2. Move existing motd files to the backup folder
-sudo mv /etc/update-motd.d/* ~/motd-backup/
-
-# 3. Clone the GitHub repository
+mv /etc/update-motd.d/* ~/motd-backup/
 git clone https://github.com/wojciehm/ansible
-
-# 4. Copy motd files from the repository
-sudo cp ansible/motd/* /etc/update-motd.d/
-
-# 5. Remove the cloned repository (optional for cleanup)
+cp ansible/motd/* /etc/update-motd.d/
 rm -rf ansible
 
-# 6. Copy lolcat (you'll need to ensure lolcat is installed first)
+# 2. Copy lolcat
 sudo cp /usr/games/lolcat /usr/bin
+
+# 3. Timezone and Locale Settings
+sudo timedatectl set-timezone Europe/Berlin
+sudo locale-gen en_US.UTF-8  # Generate the locale
+sudo update-locale LANG=en_US.UTF-8  # Set the system locale
