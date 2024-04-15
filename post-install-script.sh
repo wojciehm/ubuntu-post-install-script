@@ -22,8 +22,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # 1. MOTD Setup
 mkdir -p ~/motd-backup
-mv /etc/update-motd.d/* ~/motd-backup/
-cp ../ansible/motd/* /etc/update-motd.d/
+sudo mv /etc/update-motd.d/* ~/motd-backup/
+sudo cp ../ansible/motd/* /etc/update-motd.d/
 
 # 2. Copy lolcat
 sudo cp /usr/games/lolcat /usr/bin
