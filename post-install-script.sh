@@ -4,6 +4,9 @@ sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt 
 sudo apt install -y git ansible git-all curl zsh net-tools sysstat vnstat iotop iftop bwm-ng htop lolcat figlet 
 git version
 
+#download ansible repo
+git clone https://github.com/wojciehm/ansible.git
+
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 zsh --version
 echo $SHELL # /usr/bin/zsh
@@ -20,7 +23,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # 1. MOTD Setup
 mkdir -p ~/motd-backup
 mv /etc/update-motd.d/* ~/motd-backup/
-cp ansible/motd/* /etc/update-motd.d/
+cp ../ansible/motd/* /etc/update-motd.d/
 
 # 2. Copy lolcat
 sudo cp /usr/games/lolcat /usr/bin
