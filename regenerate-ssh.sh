@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#Set history to 10000
-set -o history   # Enable history expansion
-HISTFILE=~/.bash_history  # Set the location of the history file
-HISTSIZE=10000             # Increase history size (optional)
-
 #Clear hostname
 sudo truncate -s0 /etc/hostname
 sudo hostnamectl set-hostname localhost
