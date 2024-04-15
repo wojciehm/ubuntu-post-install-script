@@ -37,3 +37,9 @@ sudo update-locale LANG=en_US.UTF-8  # Set the system locale
 set -o history   # Enable history expansion
 HISTFILE=~/.bash_history  # Set the location of the history file
 HISTSIZE=10000             # Increase history size (optional)
+
+#Set NTP
+sudo ntpdate de.pool.ntp.org
+echo "server de.pool.ntp.org iburst" | sudo tee -a /etc/ntp.conf > /dev/null
+sudo timedatectl set-ntp true
+sudo systemctl restart systemd-timesyncd
