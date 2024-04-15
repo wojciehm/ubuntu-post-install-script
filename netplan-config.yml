@@ -1,0 +1,13 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens33:
+       addresses:
+         - 192.168.251.3/24
+       nameservers:
+        search: [homelab01.wojcieh.lab]
+        addresses: [192.168.255.220,1.1.1.1]
+       routes:
+        - to: default
+          via: 192.168.251.1
+  version: 2
