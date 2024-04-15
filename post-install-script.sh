@@ -32,3 +32,8 @@ sudo cp /usr/games/lolcat /usr/bin
 sudo timedatectl set-timezone Europe/Berlin
 sudo locale-gen en_US.UTF-8  # Generate the locale
 sudo update-locale LANG=en_US.UTF-8  # Set the system locale
+
+#Set history to 10000
+set -o history   # Enable history expansion
+HISTFILE=~/.bash_history  # Set the location of the history file
+HISTSIZE=10000             # Increase history size (optional)
