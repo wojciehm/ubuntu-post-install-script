@@ -26,7 +26,8 @@ sudo mv /etc/update-motd.d/* ~/motd-backup/
 sudo cp ../ansible/motd/* /etc/update-motd.d/
 
 # 2. Copy lolcat
-sudo cp /usr/games/lolcat /usr/bin
+#sudo cp /usr/games/lolcat /usr/bin
+sudo ln -s /usr/games/lolcat /usr/bin
 
 # 3. Timezone and Locale Settings
 sudo timedatectl set-timezone Europe/Berlin
