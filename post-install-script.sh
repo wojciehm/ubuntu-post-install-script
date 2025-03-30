@@ -1,7 +1,7 @@
 sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 
 # must-have dependencies
-sudo apt install -y git ansible git-all curl zsh net-tools sysstat vnstat iotop iftop bwm-ng htop lolcat figlet ntpdate ca-certificates gnupg lsb-release ntp zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu
+sudo apt install -y git ansible git-all curl zsh systemd-timesyncd net-tools sysstat vnstat iotop iftop bwm-ng htop lolcat figlet ntpdate ca-certificates gnupg lsb-release ntp zip unzip gnupg apt-transport-https ca-certificates net-tools ncdu
 git version
 
 #download ansible repo
